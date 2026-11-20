@@ -1,0 +1,7 @@
+# Original photos and notes stay on your Mac only
+inbox/
+# Login key for local reports - never upload
+.env
+queue/review.html
+.DS_Store
+__pycache__/

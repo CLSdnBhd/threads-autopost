@@ -1,0 +1,17 @@
+{
+  "agent_name": "Calvin",
+  "whatsapp_number": "60175495418",
+  "timezone": "Asia/Kuala_Lumpur",
+  "slots": [
+    "13:00",
+    "20:00"
+  ],
+  "language": "BM + English mix",
+  "listing_types": [
+    "new launch",
+    "subsale",
+    "rental"
+  ],
+  "threads_handle": "(set later)",
+  "github_repo": "CLSdnBhd/threads-autopost"
+}
