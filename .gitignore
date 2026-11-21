@@ -5,3 +5,4 @@ inbox/
 queue/review.html
 .DS_Store
 __pycache__/
+tools/.venv/
