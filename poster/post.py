@@ -138,7 +138,10 @@ def reply_text(post):
     """Reply text with the WhatsApp link on its own last line (Threads shows a link preview)."""
     text = post.get("reply", "")
     if post.get("link"):
-        text = f"{text}\n{post['link']}"
+        # Threads rejects wa.me links that carry a ?text= query ("invalid link
+        # attachment", tested 21 Nov 2026), so post the bare link: wa.me/<number>
+        link = post["link"].split("?", 1)[0].replace("https://", "").replace("http://", "")
+        text = f"{text}\n{link}"
     return text
 
 
