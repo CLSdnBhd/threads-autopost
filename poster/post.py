@@ -221,6 +221,18 @@ def main():
     token = os.environ.get("THREADS_TOKEN")
     if not token:
         sys.exit("THREADS_TOKEN is not set")
+
+    import headsup  # local import: headsup imports this module too
+    try:
+        skip = headsup.skip_requested(post["id"])
+    except Exception as e:  # a GitHub hiccup must never block posting
+        print(f"  (couldn't check for SKIP: {e})")
+        skip = False
+    if skip:
+        post.update(status="skipped", error="Calvin replied SKIP to the heads-up")
+        save_queue(q)
+        print("  SKIPPED: Calvin cancelled this post from the heads-up email")
+        return
     try:
         media_id, reply_id, permalink = publish_post(post, token)
     except Exception as e:  # record the failure so it shows up in the weekly report
@@ -233,6 +245,10 @@ def main():
                 posted_at=now_myt().strftime("%Y-%m-%d %H:%M"), error=None)
     save_queue(q)
     print(f"  done: {permalink}")
+    try:
+        headsup.close_with_note(post["id"], f"✅ Posted: {permalink}")
+    except Exception as e:
+        print(f"  (couldn't close heads-up: {e})")
 
 
 if __name__ == "__main__":

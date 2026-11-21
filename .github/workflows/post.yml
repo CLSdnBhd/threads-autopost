@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: threads-post
@@ -34,6 +35,7 @@ jobs:
       - name: Post
         env:
           THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           POST_ID: ${{ inputs.post_id }}
           DRY_RUN: ${{ inputs.dry_run }}
         run: |

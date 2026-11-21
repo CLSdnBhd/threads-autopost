@@ -1,0 +1,27 @@
+name: Heads-up before posting
+
+# 30 minutes before each slot, email Calvin a preview of the post
+# (as a GitHub issue). Replying SKIP to the email cancels that post.
+
+on:
+  schedule:
+    - cron: "30 4 * * *"    # 12:30 PM Malaysia time
+    - cron: "30 11 * * *"   # 7:30 PM Malaysia time
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  headsup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Send heads-up
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 poster/headsup.py
