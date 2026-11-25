@@ -19,8 +19,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 name = sys.argv[1] if len(sys.argv) > 1 else "THREADS_TOKEN"
 repo = json.load(open(os.path.join(ROOT, "config.json")))["github_repo"]
 
-value = None
-for line in open(os.path.join(ROOT, ".env"), encoding="utf-8"):
+value = os.environ.get(name)
+for line in ([] if value else open(os.path.join(ROOT, ".env"), encoding="utf-8")):
     if line.startswith(name + "="):
         value = line.strip().split("=", 1)[1]
 if not value:

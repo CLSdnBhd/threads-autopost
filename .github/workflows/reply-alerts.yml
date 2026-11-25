@@ -1,0 +1,37 @@
+name: Reply alerts to Telegram
+
+# Every 15 minutes: send Calvin's Telegram bot any new replies (incl. hidden)
+# on his recent Threads posts.
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reply-alerts
+  cancel-in-progress: false
+
+jobs:
+  alerts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Check replies
+        env:
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 poster/inbox_watch.py
+      - name: Remember what was sent
+        run: |
+          git config user.name "threads-autopost"
+          git config user.email "actions@users.noreply.github.com"
+          git add queue/seen_replies.json
+          git diff --cached --quiet || (git commit -m "Reply alerts: update seen list [skip ci]" && git pull --rebase && git push)
