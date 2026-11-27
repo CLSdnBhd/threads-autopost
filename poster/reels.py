@@ -62,6 +62,20 @@ def footer():
     return f"Calvin{' · ' + title if title else ''} · Polygon Properties"
 
 
+def tg(text):
+    """Message Calvin's Telegram bot. Never lets a Telegram problem stop posting."""
+    token, chat = os.environ.get("TELEGRAM_BOT_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID")
+    if not (token and chat):
+        return False
+    try:
+        data = urllib.parse.urlencode({"chat_id": chat, "text": text, "disable_web_page_preview": "true"}).encode()
+        with urllib.request.urlopen(f"https://api.telegram.org/bot{token}/sendMessage", data, timeout=30) as r:
+            return json.loads(r.read()).get("ok", False)
+    except Exception as e:
+        print(f"  (Telegram message failed: {e})")
+        return False
+
+
 def full_caption(post):
     tags = " ".join(post.get("hashtags", []))
     return "\n\n".join(x for x in (post["caption"].strip(), footer(), tags) if x)
@@ -222,6 +236,7 @@ def main():
         print("  NOT POSTED: " + post["error"])
         if not a.dry_run:
             save_queue(q)
+            tg(f"⚠️ Reel NOT posted: {post.get('title')}\n{post['error']}\nTell Claude to fix it.")
         sys.exit(1)
     if a.dry_run:
         print("--- caption ---\n" + full_caption(post) + "\n(dry run: nothing posted)")
@@ -237,6 +252,7 @@ def main():
         post.update(status="skipped", error="Calvin replied SKIP to the heads-up")
         save_queue(q)
         print("  SKIPPED")
+        tg(f"⏭️ Skipped tonight's reel as you asked: {post.get('title')}")
         return
 
     token, page_id, ig_id = creds()
@@ -259,6 +275,12 @@ def main():
     post["error"] = None if not left else "; ".join(post["results"][p].get("error", "") for p in left)
     save_queue(q)
     links = "\n".join(f"- {p}: {r.get('permalink')}" for p, r in post["results"].items() if r.get("status") == "posted")
+    if not left:
+        tg(f"✅ Reel posted: {post.get('title')}\n\n{links.replace('- ', '')}\n\n"
+           "Reply to comments in the next 30 min, and upload the same video to TikTok 🙌")
+    else:
+        tg(f"⚠️ Reel problem: {post.get('title')}\nPosted: {links.replace('- ', '') or 'none'}\n"
+           f"Failed: {', '.join(left)}. Tomorrow's run retries only what failed. Tell Claude if it keeps failing.")
     try:
         if not left:
             headsup.close_with_note(post["id"], f"✅ Posted:\n{links}")

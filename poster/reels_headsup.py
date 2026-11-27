@@ -39,6 +39,9 @@ def main():
         return
     iss = headsup.gh("POST", "issues", {"title": title, "body": body})
     print(f"Heads-up sent: {iss.get('html_url')}")
+    reels.tg(f"⏰ {slot:%-I:%M %p} tonight: {p.get('title')}\n\n{p['caption']}\n\n"
+             f"🎬 Video: {video}\n"
+             f"To cancel, reply SKIP to the GitHub email or close this: {iss.get('html_url')}")
 
 
 if __name__ == "__main__":
