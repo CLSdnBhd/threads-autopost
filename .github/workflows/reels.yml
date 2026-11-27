@@ -1,0 +1,57 @@
+name: Post Reels to Facebook + Instagram
+
+on:
+  schedule:
+    - cron: "0 12 * * *"   # 8:00 PM Malaysia time (UTC+8)
+  workflow_dispatch:
+    inputs:
+      post_id:
+        description: "Post this approved reel now (test). Leave empty to post whatever is due."
+        required: false
+      dry_run:
+        description: "Dry run only (show, don't post)"
+        type: boolean
+        default: false
+      check:
+        description: "Only check the Meta token and accounts"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: reels-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Post reel
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          POST_ID: ${{ inputs.post_id }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          CHECK: ${{ inputs.check }}
+        run: |
+          ARGS=()
+          if [ "$CHECK" = "true" ]; then ARGS+=(--check); fi
+          if [ -n "$POST_ID" ]; then ARGS+=(--id "$POST_ID"); fi
+          if [ "$DRY_RUN" = "true" ]; then ARGS+=(--dry-run); fi
+          python3 poster/reels.py "${ARGS[@]}"
+      - name: Save result to queue
+        if: always()
+        run: |
+          git config user.name "threads-autopost"
+          git config user.email "actions@users.noreply.github.com"
+          git add queue/reels.json
+          git diff --cached --quiet || (git commit -m "Reels: update queue [skip ci]" && git pull --rebase && git push)
