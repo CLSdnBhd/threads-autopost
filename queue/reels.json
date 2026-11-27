@@ -130,6 +130,147 @@
       "approved": true,
       "status": "queued",
       "results": {}
+    },
+    {
+      "id": "r-2026-12-01",
+      "slot": "2026-12-01 20:00",
+      "pillar": "education",
+      "title": "Loft Park 02 · Rent vs own",
+      "video": "reels/videos/r-2026-12-01.mp4",
+      "caption": "Sewa vs beli: mana satu lagi rugi? 🤔\nRamai tak sedar duit sewa tu 100% hilang tiap bulan.\n\nNak tahu berapa ansuran kalau you beli instead? DM aku \"LOFT\" 📲",
+      "hashtags": [
+        "#hartanahkl",
+        "#propertymalaysia",
+        "#rumahpertama",
+        "#cyberjaya",
+        "#newlaunchkl",
+        "#ejenhartanah",
+        "#caricalvin"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram"
+      ],
+      "approved": false,
+      "status": "queued",
+      "results": {}
+    },
+    {
+      "id": "r-2026-12-02",
+      "slot": "2026-12-02 20:00",
+      "pillar": "listing",
+      "title": "Bukit Tunku A · POV no need for a resort",
+      "video": "reels/videos/r-2026-12-02.mp4",
+      "caption": "POV: weekend tak payah pergi resort 🤍\nLiving room terus ke private pool sendiri.\nBukit Tunku. From RM28 juta.\n\nSerious buyers only. DM aku \"MANSION\" 📲",
+      "hashtags": [
+        "#bukittunku",
+        "#luxuryhomes",
+        "#klmansion",
+        "#hartanahkl",
+        "#propertymalaysia",
+        "#caricalvin"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram"
+      ],
+      "approved": false,
+      "status": "queued",
+      "results": {}
+    },
+    {
+      "id": "r-2026-12-03",
+      "slot": "2026-12-03 20:00",
+      "pillar": "recruitment",
+      "title": "Two Mondays (Polygon recruitment 02)",
+      "video": "reels/videos/r-2026-12-03.mp4",
+      "caption": "Dua orang. Dua Isnin yang sangat berbeza 😂\nSatu kerja ikut jam. Satu kerja ikut target sendiri.\n\nNak tahu macam mana jadi ejen hartanah? DM \"JOIN\" 🤝",
+      "hashtags": [
+        "#kerjayahartanah",
+        "#realestatemalaysia",
+        "#ejenhartanah",
+        "#polygonproperties",
+        "#centuryelites",
+        "#caricalvin"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram"
+      ],
+      "approved": false,
+      "status": "queued",
+      "results": {}
+    },
+    {
+      "id": "r-2026-12-04",
+      "slot": "2026-12-04 20:00",
+      "pillar": "listing",
+      "title": "Chancery A · Jalan Ampang under RM450K",
+      "video": "reels/videos/r-2026-12-04.mp4",
+      "caption": "Jalan Ampang… bawah RM450K?! 👀\nLiving room cantik, designer lighting, full kitchen.\nFrom RM430K.\n\nDM aku \"AMPANG\" sebelum habis 📲",
+      "hashtags": [
+        "#jalanampang",
+        "#klcondo",
+        "#rumahpertama",
+        "#hartanahkl",
+        "#propertymalaysia",
+        "#caricalvin"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram"
+      ],
+      "approved": false,
+      "status": "queued",
+      "results": {}
+    },
+    {
+      "id": "r-2026-12-05",
+      "slot": "2026-12-05 20:00",
+      "pillar": "listing",
+      "title": "Loftpark Cyberjaya show unit",
+      "video": "reels/videos/r-2026-12-05.mp4",
+      "caption": "Rumah pertama you kat Cyberjaya boleh nampak macam ni 🫶🏻\nWarm lighting, dining cantik, bilik yang buat you nak balik rumah.\nFrom RM350K.\n\nNak tengok show unit? DM aku \"LOFT\" 📲",
+      "hashtags": [
+        "#hartanahkl",
+        "#propertymalaysia",
+        "#rumahpertama",
+        "#cyberjaya",
+        "#newlaunchkl",
+        "#ejenhartanah",
+        "#caricalvin"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram"
+      ],
+      "approved": false,
+      "status": "queued",
+      "results": {}
+    },
+    {
+      "id": "r-2026-12-06",
+      "slot": "2026-12-06 20:00",
+      "pillar": "education",
+      "title": "Loft Park 03 · Why Cyberjaya",
+      "video": "reels/videos/r-2026-12-06.mp4",
+      "caption": "Kenapa ramai first-time buyer pilih Cyberjaya? 🤔\nTengok sampai habis, sebab no. 3 paling ramai tak tahu.\n\nNak senarai projek Cyberjaya bawah RM400K? DM aku \"LOFT\" 📲",
+      "hashtags": [
+        "#hartanahkl",
+        "#propertymalaysia",
+        "#rumahpertama",
+        "#cyberjaya",
+        "#newlaunchkl",
+        "#ejenhartanah",
+        "#caricalvin"
+      ],
+      "platforms": [
+        "facebook",
+        "instagram"
+      ],
+      "approved": false,
+      "status": "queued",
+      "results": {}
     }
   ]
 }
