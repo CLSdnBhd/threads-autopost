@@ -58,7 +58,8 @@ def footer():
     """Agency line on every caption (Malaysian estate-agent ads should show agency + REN)."""
     c = json.load(open(CONFIG, encoding="utf-8")).get("reels", {})
     ren = c.get("ren_number", "").strip()
-    return f"Calvin{' · ' + ren if ren else ''} · Polygon Properties"
+    title = ren or c.get("agent_title", "").strip()
+    return f"Calvin{' · ' + title if title else ''} · Polygon Properties"
 
 
 def full_caption(post):
