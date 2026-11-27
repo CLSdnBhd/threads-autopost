@@ -45,8 +45,22 @@
         "instagram"
       ],
       "approved": true,
-      "status": "queued",
-      "results": {}
+      "status": "posted",
+      "results": {
+        "facebook": {
+          "status": "posted",
+          "id": "1619945209355233",
+          "permalink": "https://www.facebook.com/reel/1619945209355233",
+          "posted_at": "2026-11-27 12:05"
+        },
+        "instagram": {
+          "status": "posted",
+          "id": "18119383591832898",
+          "permalink": "https://www.instagram.com/reel/DgOyCEoxlxX/",
+          "posted_at": "2026-11-27 12:06"
+        }
+      },
+      "error": null
     },
     {
       "id": "r-2026-12-09",
