@@ -1,0 +1,29 @@
+name: Reels heads-up
+
+# Telegram + email preview before tonight's reel. Runs early because GitHub
+# schedules are often late; only one heads-up is ever sent per reel.
+
+on:
+  schedule:
+    - cron: "0 11 * * *"   # 7:00 PM MYT
+    - cron: "20 11 * * *"  # 7:20 PM MYT
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  headsup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Send reels heads-up
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 poster/reels_headsup.py

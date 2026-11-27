@@ -12,6 +12,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import headsup  # noqa: E402
 import reels    # noqa: E402
 
+WINDOW_MIN = 120   # heads-up runs from 7 PM for the 8 PM reel
+
 
 def main():
     dry = "--dry-run" in sys.argv
@@ -19,7 +21,7 @@ def main():
     now = reels.now_myt()
     p = next((p for p in sorted(q["posts"], key=lambda p: p["slot"])
               if p.get("status") == "queued" and p.get("approved")
-              and now <= reels.parse_slot(p["slot"]) <= now + dt.timedelta(minutes=headsup.WINDOW_MIN)), None)
+              and now <= reels.parse_slot(p["slot"]) <= now + dt.timedelta(minutes=WINDOW_MIN)), None)
     if not p:
         print("No reel in the next hour.")
         return

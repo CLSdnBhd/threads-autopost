@@ -2,7 +2,12 @@ name: Post Reels to Facebook + Instagram
 
 on:
   schedule:
-    - cron: "0 12 * * *"   # 8:00 PM Malaysia time (UTC+8)
+    # GitHub often starts scheduled runs 30-60 min late, so try several times.
+    # The first run that fires posts the reel; later runs see it's done.
+    - cron: "45 11 * * *"  # 7:45 PM MYT (posts if the 8 PM slot is within 15 min)
+    - cron: "0 12 * * *"   # 8:00 PM
+    - cron: "15 12 * * *"  # 8:15 PM
+    - cron: "30 12 * * *"  # 8:30 PM
   workflow_dispatch:
     inputs:
       post_id:
