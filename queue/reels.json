@@ -222,30 +222,6 @@
       "results": {}
     },
     {
-      "id": "r-2026-12-05",
-      "slot": "2026-12-05 20:00",
-      "pillar": "listing",
-      "title": "Loftpark Cyberjaya show unit",
-      "video": "reels/videos/r-2026-12-05.mp4",
-      "caption": "Rumah pertama you kat Cyberjaya boleh nampak macam ni 🫶🏻\nWarm lighting, dining cantik, bilik yang buat you nak balik rumah.\nFrom RM350K.\n\nNak tengok show unit? DM aku \"CJ\" 📲",
-      "hashtags": [
-        "#hartanahkl",
-        "#propertymalaysia",
-        "#rumahpertama",
-        "#cyberjaya",
-        "#newlaunchkl",
-        "#ejenhartanah",
-        "#caricalvin"
-      ],
-      "platforms": [
-        "facebook",
-        "instagram"
-      ],
-      "approved": true,
-      "status": "queued",
-      "results": {}
-    },
-    {
       "id": "r-2026-12-06",
       "slot": "2026-12-06 20:00",
       "pillar": "education",
@@ -295,7 +271,7 @@
     },
     {
       "id": "r-2026-12-08-lp",
-      "slot": "2026-12-08 20:00",
+      "slot": "2026-12-05 20:00",
       "pillar": "listing",
       "title": "Cyberjaya freehold · RM0 down (hard-sell, tower model)",
       "video": "reels/videos/r-2026-12-08-lp.mp4",
