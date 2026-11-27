@@ -125,7 +125,25 @@ def problems_for(p):
             out.append(f"{ph} over 8 MB")
     if p.get("link") and not p["link"].startswith("https://"):
         out.append("link must start with https://")
+    for name in dev_names(p.get("listing", "")):
+        if name.lower() in p.get("reply", "").lower():
+            out.append(f"reply names the development ({name}): Calvin's rule is no development names in replies")
     return out
+
+
+def dev_names(folder):
+    """Project/developer names from a listing's details.txt that must never appear in replies."""
+    path = os.path.join(INBOX, folder, "details.txt")
+    names = []
+    if os.path.exists(path):
+        for line in open(path, encoding="utf-8"):
+            for key in ("project:", "developer:"):
+                if line.lower().startswith(key):
+                    v = line.split(":", 1)[1].split("#")[0].strip()
+                    v = v.split(" (")[0].split(",")[0].split(" by ")[0].strip()
+                    if len(v) >= 3 and not v.startswith("("):
+                        names.append(v)
+    return names
 
 
 def cmd_validate():

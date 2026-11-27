@@ -41,7 +41,7 @@ Working folder: `threads-autopost/`. Read `STYLE.md` and `config.json` first.
   "formula": "Price surprise",
   "photos": ["queue/photos/mont-kiara-3r2b/01.jpg", "..."],
   "caption": "Hook line 🫶🏻\nBenefit line 🤍\n📍Mont Kiara, KL",
-  "reply": "Freehold | 3 bedrooms 2 bathrooms 2 carparks\nSiap by 2029 ✅\nFrom RM___\nPM for more details 🫡 or WhatsApp terus 👇",
+  "reply": "Mont Kiara, KL\nFreehold | 3 bedrooms 2 bathrooms 2 carparks\nSiap by 2029 ✅\nFrom RM___\nPM for more details 🫡 or WhatsApp terus 👇",
   "link": "https://wa.me/60175495418?text=Hi%20Calvin%2C%20saya%20nak%20tahu%20pasal%20Mont%20Kiara%203R2B%20(Threads)",
   "approved": false,
   "status": "queued"
