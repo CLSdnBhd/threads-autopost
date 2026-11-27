@@ -59,7 +59,8 @@ def footer():
     c = json.load(open(CONFIG, encoding="utf-8")).get("reels", {})
     ren = c.get("ren_number", "").strip()
     title = ren or c.get("agent_title", "").strip()
-    return f"Calvin{' · ' + title if title else ''} · Polygon Properties"
+    brand = c.get("brand", "KL Realtor").strip()
+    return f"Calvin{' · ' + title if title else ''}{' · ' + brand if brand else ''}"
 
 
 def tg(text):
