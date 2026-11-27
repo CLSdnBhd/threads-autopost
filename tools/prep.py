@@ -126,8 +126,9 @@ def problems_for(p):
     if p.get("link") and not p["link"].startswith("https://"):
         out.append("link must start with https://")
     for name in dev_names(p.get("listing", "")):
-        if name.lower() in p.get("reply", "").lower():
-            out.append(f"reply names the development ({name}): Calvin's rule is no development names in replies")
+        for field in ("caption", "reply"):
+            if name.lower() in p.get(field, "").lower():
+                out.append(f"{field} names the development ({name}): Calvin's rule is no development names on Threads")
     return out
 
 

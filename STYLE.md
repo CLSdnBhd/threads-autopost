@@ -22,7 +22,7 @@ Rules:
 
 ## Self-reply (posted ~20 s later, carries the lead)
 
-**Rule from Calvin (27 Nov 2026): never name the development or developer in the reply.** Start with the area (e.g. `Damansara Heights, KL`), not the project name, so buyers have to WhatsApp to find out. `prep.py validate` blocks any reply that contains the `project:` or `developer:` from details.txt.
+**Rule from Calvin (27 Nov 2026): never name the development or developer in the reply OR the caption** (captions added the same day). Start with the area (e.g. `Damansara Heights, KL`), not the project name, so buyers have to WhatsApp to find out. `prep.py validate` blocks any reply that contains the `project:` or `developer:` from details.txt.
 
 ```
 [Freehold/Leasehold] | [X] bedrooms [Y] bathrooms [Z] carparks
