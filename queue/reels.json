@@ -20,7 +20,7 @@
         "facebook",
         "instagram"
       ],
-      "approved": false,
+      "approved": true,
       "status": "queued",
       "results": {}
     },
@@ -44,7 +44,7 @@
         "facebook",
         "instagram"
       ],
-      "approved": false,
+      "approved": true,
       "status": "queued",
       "results": {}
     },
@@ -67,7 +67,7 @@
         "facebook",
         "instagram"
       ],
-      "approved": false,
+      "approved": true,
       "status": "queued",
       "results": {}
     },
@@ -90,7 +90,7 @@
         "facebook",
         "instagram"
       ],
-      "approved": false,
+      "approved": true,
       "status": "queued",
       "results": {}
     },
@@ -113,7 +113,7 @@
         "facebook",
         "instagram"
       ],
-      "approved": false,
+      "approved": true,
       "status": "queued",
       "results": {}
     }
