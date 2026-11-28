@@ -1,0 +1,174 @@
+{
+ "_about": "Campaign calendar source. 'overrides' = page wording for queued reels (by queue id). 'planned' = rows not in the queue yet; a planned row is hidden once a queued reel takes its date.",
+ "overrides": {
+  "r-2026-12-08": {
+   "cat": "list",
+   "title": "Transit-oriented development (Cyberjaya TOD)",
+   "note": "Posted 12:05pm on Facebook + Instagram. CTA: DM \"TOD\".",
+   "date": "2026-11-27"
+  },
+  "r-2026-12-07": {
+   "cat": "edu",
+   "title": "Loft Park 01 · Never pay rent again",
+   "note": "Posted 8:10pm on Facebook + Instagram. CTA: DM \"LOFT\"."
+  },
+  "r-2026-12-09": {
+   "cat": "recruit",
+   "title": "Sell me this condo",
+   "note": "Century Elites recruitment 01. CTA: DM \"JOIN\"."
+  },
+  "r-2026-12-10": {
+   "cat": "list",
+   "title": "Damansara Heights · Sunday, natural cut",
+   "note": "39s, your clips + real sound, no AI voice. CTA: DM \"DC\"."
+  },
+  "r-2026-12-12": {
+   "cat": "list",
+   "title": "Cyberjaya shop lots for rent",
+   "note": "From RM5,500/month. CTA: DM \"SHOPLOT\"."
+  },
+  "r-2026-12-01": {
+   "cat": "edu",
+   "title": "Loft Park 02 · Rent vs own",
+   "note": "Education series. CTA: DM \"RUMAH\"."
+  },
+  "r-2026-12-02": {
+   "cat": "list",
+   "title": "Bukit Tunku · POV: no need for a resort",
+   "note": "RM28M. CTA: DM \"LUXURY\"."
+  },
+  "r-2026-12-03": {
+   "cat": "recruit",
+   "title": "Two Mondays",
+   "note": "Century Elites recruitment 02. CTA: DM \"JOIN\"."
+  },
+  "r-2026-12-04": {
+   "cat": "list",
+   "title": "Jalan Ampang under RM450K?!",
+   "note": "From RM430K. CTA: DM \"AMPANG\"."
+  },
+  "r-2026-12-08-lp": {
+   "cat": "list",
+   "title": "Cyberjaya freehold · RM0 down",
+   "note": "Scale model + room tour, 41s. CTA: DM \"RM0\"."
+  },
+  "r-2026-12-06": {
+   "cat": "edu",
+   "title": "Loft Park 03 · Why Cyberjaya",
+   "note": "Education series. CTA: DM \"CJ400\"."
+  },
+  "r-2026-12-07-avan3": {
+   "cat": "list",
+   "title": "Cyberjaya launch · 3 reasons",
+   "note": "MRT, freehold, layouts. CTA: DM \"TOD\"."
+  },
+  "r-2026-12-08-dcb": {
+   "cat": "list",
+   "title": "Damansara Heights · luxury + location",
+   "note": "49s with your clips (bedroom, pool, MRT walkway). CTA: DM \"DC\"."
+  },
+  "r-2026-12-09-cjsa": {
+   "cat": "list",
+   "title": "Cyberjaya · serviced apartment walkthrough",
+   "note": "25s walkthrough. CTA: DM \"DPULZE\"."
+  },
+  "r-2026-12-10-cjsoho": {
+   "cat": "list",
+   "title": "Cyberjaya · SOHO walkthrough",
+   "note": "23s walkthrough. CTA: DM \"SOHO\"."
+  }
+ },
+ "planned": [
+  {
+   "date": "2026-12-11",
+   "cat": "bts",
+   "title": "Team night (your clips)",
+   "note": "Natural cut, light text. Send your clips.",
+   "status": "film"
+  },
+  {
+   "date": "2026-12-12",
+   "cat": "list",
+   "title": "Bukit Tunku · what does RM28M get you?",
+   "note": "Longer cut. CTA: DM \"LUXURY\".",
+   "status": "make"
+  },
+  {
+   "date": "2026-12-13",
+   "cat": "engage",
+   "title": "Sewa atau beli? (your clips)",
+   "note": "Poll / Q&A. Send your clips.",
+   "status": "film"
+  },
+  {
+   "date": "2026-12-14",
+   "cat": "edu",
+   "title": "Loft Park 05 · Three mistakes",
+   "note": "Education series. Check: names the development.",
+   "status": "make"
+  },
+  {
+   "date": "2026-12-15",
+   "cat": "list",
+   "title": "Jalan Ampang · POV first home",
+   "note": "Longer cut. CTA: DM \"AMPANG\".",
+   "status": "make"
+  },
+  {
+   "date": "2026-12-16",
+   "cat": "recruit",
+   "title": "The payslip",
+   "note": "Century Elites recruitment 03. Needs the new end card first.",
+   "status": "make"
+  },
+  {
+   "date": "2026-12-17",
+   "cat": "list",
+   "title": "Cyberjaya shop lots · open your own shop in 2027",
+   "note": "Longer cut. CTA: DM \"SHOPLOT\".",
+   "status": "make"
+  },
+  {
+   "date": "2026-12-18",
+   "cat": "bts",
+   "title": "Open: viewing day, team, new listings",
+   "note": "Kept free for your own clips and new listings.",
+   "status": "film"
+  },
+  {
+   "date": "2026-12-21",
+   "cat": "edu",
+   "title": "Loft Park 04 · Your home pays you",
+   "note": "Education series. Check: names the development.",
+   "status": "make"
+  },
+  {
+   "date": "2026-12-23",
+   "cat": "recruit",
+   "title": "The rookie",
+   "note": "Century Elites recruitment 04. Needs the new end card first.",
+   "status": "make"
+  },
+  {
+   "date": "2026-12-25",
+   "cat": "bts",
+   "title": "Christmas (your clips)",
+   "note": "Send clips.",
+   "status": "film"
+  },
+  {
+   "date": "2026-12-31",
+   "cat": "edu",
+   "title": "Loft Park 06 · What if you waited",
+   "note": "New Year's Eve: \"another year of rent?\" Check: names the development.",
+   "status": "make"
+  },
+  {
+   "date": "2027-01-01",
+   "cat": "recruit",
+   "title": "Wake-up call",
+   "note": "New year, new career. Needs the new end card; \"POLYGON!\" chant to change?",
+   "status": "make"
+  }
+ ]
+}
