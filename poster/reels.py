@@ -116,7 +116,18 @@ def post_instagram(post, video, token, ig_id):
         "media_type": "REELS", "upload_type": "resumable", "caption": full_caption(post),
         "share_to_feed": "true"}, token)
     cid = c["id"]
-    upload_bytes(c.get("uri") or f"https://rupload.facebook.com/ig-api-upload/{V}/{cid}", video, token)
+    try:
+        upload_bytes(c.get("uri") or f"https://rupload.facebook.com/ig-api-upload/{V}/{cid}", video, token)
+    except Exception as e:
+        # Instagram sometimes rejects a direct upload (ProcessingFailedError) but accepts
+        # the same file fetched from its public GitHub link.
+        repo = os.environ.get("GITHUB_REPOSITORY") or "CLSdnBhd/threads-autopost"
+        url = f"https://raw.githubusercontent.com/{repo}/main/{post['video']}"
+        print(f"  instagram direct upload failed ({str(e)[:80]}); retrying via {url}")
+        c = call("POST", f"{GRAPH}/{ig_id}/media", {
+            "media_type": "REELS", "video_url": url, "caption": full_caption(post),
+            "share_to_feed": "true"}, token)
+        cid = c["id"]
     start = time.time()
     while True:
         s = call("GET", f"{GRAPH}/{cid}", {"fields": "status_code,status"}, token)
