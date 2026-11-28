@@ -95,7 +95,7 @@
         "instagram"
       ],
       "approved": true,
-      "status": "partial",
+      "status": "posted",
       "results": {
         "facebook": {
           "status": "posted",
@@ -104,11 +104,13 @@
           "posted_at": "2026-11-28 20:36"
         },
         "instagram": {
-          "status": "error",
-          "error": "Meta API 400 on https://rupload.facebook.com/ig-api-upload/v27.0/17871473763675858: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}"
+          "status": "posted",
+          "id": "17891817522620664",
+          "permalink": "https://www.instagram.com/reel/DgSSuOEtyEF/",
+          "posted_at": "2026-11-28 20:49"
         }
       },
-      "error": "Meta API 400 on https://rupload.facebook.com/ig-api-upload/v27.0/17871473763675858: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}"
+      "error": null
     },
     {
       "id": "r-2026-12-10",
